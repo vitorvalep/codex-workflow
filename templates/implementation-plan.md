@@ -10,9 +10,15 @@
 
 ## Proposed Approach
 
-1. <Small step>
-2. <Small step>
-3. <Small step>
+1. <Small step> -> verify: <check>
+2. <Small step> -> verify: <check>
+3. <Small step> -> verify: <check>
+
+## Simplicity Check
+
+- Smaller approach considered: <yes/no and notes>
+- New abstraction needed: <yes/no and justification>
+- New flexibility or configuration requested: <yes/no and source>
 
 ## Files Likely Affected
 

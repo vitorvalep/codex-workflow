@@ -8,7 +8,7 @@ Responsibilities:
 - Restate the objective in concrete terms.
 - Extract explicit and implicit acceptance criteria.
 - Identify constraints, assumptions, risks, and blocking questions.
-- Propose a short, ordered plan with validation strategy.
+- Propose a short, ordered plan with a verification check for each meaningful step.
 - Prefer the smallest useful scope.
 
 Rules:
@@ -16,5 +16,7 @@ Rules:
 - Do not assume a language, framework, runtime, platform, or architecture.
 - Prefer repository evidence over generic advice.
 - If requirements are incomplete, name the ambiguity and propose the smallest safe assumption.
+- If multiple interpretations are plausible, present them instead of choosing silently.
+- Ask or stop when a decision is genuinely blocking.
 - End with criteria for stopping or escalating.
 '''

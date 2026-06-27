@@ -6,6 +6,8 @@ Use este workflow como fluxo principal para feature development, bugfix simples,
 
 - Leia a tarefa e os critérios de aceite.
 - Identifique escopo, não escopo, restrições e riscos.
+- Declare suposições antes de editar.
+- Se houver múltiplas interpretações, registre as opções relevantes.
 - Se requisitos estiverem incompletos, registre a ambiguidade.
 - Quando for seguro, faça a menor suposição compatível com o pedido.
 - Se houver bloqueio real, pare e explique a informação necessária.
@@ -14,6 +16,7 @@ Use este workflow como fluxo principal para feature development, bugfix simples,
 
 - Defina objetivo em termos verificáveis.
 - Proponha plano curto.
+- Para tarefas com múltiplas etapas, associe cada etapa a uma verificação.
 - Defina validações necessárias.
 - Estabeleça condições de parada.
 
@@ -28,6 +31,7 @@ Use este workflow como fluxo principal para feature development, bugfix simples,
 
 - Escolha a menor solução defensável.
 - Preserve compatibilidade e convenções existentes.
+- Evite abstrações, recursos, flexibilidade ou configuração especulativa.
 - Identifique impactos em contratos, dados, configuração, erros e operação.
 - Defina como cada risco será validado.
 
@@ -35,6 +39,8 @@ Use este workflow como fluxo principal para feature development, bugfix simples,
 
 - Faça mudanças pequenas e focadas.
 - Evite refatorações não relacionadas.
+- Não melhore código adjacente apenas porque ele foi lido.
+- Cada linha alterada deve rastrear até o pedido, validação ou limpeza causada pela mudança.
 - Justifique dependências novas.
 - Mantenha a alteração reversível.
 
@@ -102,4 +108,5 @@ Ao encerrar, informe:
 - Se requisitos estiverem incompletos, registrar ambiguidade e fazer a menor suposição segura.
 - Se houver bloqueio real, parar e explicar.
 - Se a mesma falha ocorrer repetidamente, parar após tentativas razoáveis e reportar evidência.
+- Se o diff crescer além do necessário ou incluir melhorias oportunistas, simplificar antes de continuar.
 - Encerrar apenas quando a definição de pronto for atendida.

@@ -13,9 +13,11 @@ Use esta skill para planejar, escrever ou avaliar validações de comportamento.
 2. Escolha o nível de teste mais próximo do comportamento.
 3. Reuse framework, fixtures, dados e estilo existentes.
 4. Cubra caminho nominal, bordas, regressões e falhas esperadas quando aplicável.
-5. Garanta determinismo e isolamento.
-6. Execute o menor conjunto relevante antes de validações amplas.
-7. Registre comandos, resultados e limitações.
+5. Para bugfix, prefira um teste que reproduza o bug antes da correção.
+6. Para refactor, garanta teste antes e depois para preservar comportamento.
+7. Garanta determinismo e isolamento.
+8. Execute o menor conjunto relevante antes de validações amplas.
+9. Registre comandos, resultados e limitações.
 
 ## Tipos de validação
 
@@ -34,6 +36,7 @@ Use esta skill para planejar, escrever ou avaliar validações de comportamento.
 - [ ] Falhas produzem diagnóstico útil.
 - [ ] O teste não depende de ordem, tempo, rede ou ambiente sem controle.
 - [ ] Casos de erro relevantes foram incluídos.
+- [ ] O teste não foi enfraquecido apenas para passar.
 - [ ] Validação manual foi documentada quando necessária.
 
 ## Critérios de qualidade

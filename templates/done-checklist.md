@@ -5,6 +5,8 @@
 - [ ] Task objective addressed.
 - [ ] Criteria of acceptance satisfied or exceptions recorded.
 - [ ] No unrelated changes included.
+- [ ] Assumptions and ambiguities recorded.
+- [ ] Every changed line traces to the request, validation, or cleanup caused by this change.
 
 ## Evidence
 
@@ -20,6 +22,7 @@
 - [ ] Performance reviewed when applicable.
 - [ ] Documentation updated when applicable.
 - [ ] New dependencies justified or avoided.
+- [ ] No speculative abstraction, feature, flexibility, or configuration added.
 
 ## Delivery Summary
 

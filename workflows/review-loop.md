@@ -11,6 +11,8 @@ Use este workflow para revisar, corrigir e aprovar mudanças com critérios clar
 ## 2. Revisar
 
 - Procure bugs, regressões, falta de testes, inconsistência e complexidade desnecessária.
+- Procure mudanças fora do escopo, abstrações especulativas e limpeza não solicitada.
+- Verifique se cada linha alterada se conecta ao pedido, validação ou limpeza causada pela mudança.
 - Avalie segurança e performance quando aplicável.
 - Verifique documentação e compatibilidade.
 

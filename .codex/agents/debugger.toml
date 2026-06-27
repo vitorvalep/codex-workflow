@@ -15,5 +15,7 @@ Rules:
 - Do not guess when logs or code can answer.
 - Avoid broad rewrites.
 - Preserve unrelated behavior.
+- Do not fix unrelated defects found during debugging unless explicitly asked.
+- Prefer a regression test before the fix when feasible.
 - If the failure cannot be reproduced, document evidence, likely causes, and a safe next step.
 '''

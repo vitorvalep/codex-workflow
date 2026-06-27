@@ -6,6 +6,8 @@ O objetivo é fornecer um processo padrão para qualquer projeto, linguagem, fra
 
 As diretrizes privilegiam evidência do código real em vez de suposições, mudanças pequenas e reversíveis, validação explícita e registro dos comandos executados, resultados obtidos e riscos restantes.
 
+As regras favorecem cautela em vez de velocidade. Para tarefas triviais, use julgamento, mas o padrão do kit é reduzir erros comuns de agentes de código: assumir requisitos não ditos, criar soluções grandes demais, mexer em código fora do escopo e encerrar sem validação.
+
 ## O que este repositório contém
 
 - `AGENTS.md`: regras principais para o agente coordenador, subagentes e encerramento de tarefas.
@@ -22,10 +24,16 @@ Este repositório é útil quando você quer que o Codex trabalhe com um process
 
 ## Instalação local
 
-Para instalar os agentes e skills no seu ambiente local:
+Para instalar os agentes e skills no seu ambiente local em macOS, Linux ou shells compatíveis com Bash:
 
 ```bash
 ./scripts/install-local.sh
+```
+
+No Windows PowerShell:
+
+```powershell
+.\scripts\install-local.ps1
 ```
 
 O script copia:
@@ -39,10 +47,16 @@ O script não instala workflows e templates globalmente. Esses arquivos são pen
 
 ## Sincronizar para um projeto
 
-Para aplicar este kit em outro projeto:
+Para aplicar este kit em outro projeto em macOS, Linux ou shells compatíveis com Bash:
 
 ```bash
 ./scripts/sync-to-project.sh /caminho/do/projeto
+```
+
+No Windows PowerShell:
+
+```powershell
+.\scripts\sync-to-project.ps1 C:\caminho\do\projeto
 ```
 
 O script copia:
@@ -71,6 +85,17 @@ Use `workflows/development-loop.md` como fluxo padrão. O loop exige:
 10. Encerrar apenas quando a definição de pronto for atendida.
 
 Se teste, build, revisão, segurança ou performance falharem, o resultado alimenta o próximo ciclo. Se a mesma falha se repetir sem progresso objetivo, o loop deve parar e registrar evidências, hipóteses e bloqueios.
+
+## Diretrizes de comportamento
+
+O desenvolvimento deve seguir quatro regras práticas:
+
+- Pense antes de codar: declare suposições, ambiguidades e tradeoffs; se a ambiguidade for bloqueante, pergunte antes de editar.
+- Simplicidade primeiro: implemente o menor código que resolve o problema; não adicione features, abstrações, configurabilidade ou flexibilidade especulativa.
+- Mudanças cirúrgicas: toque apenas no necessário; não melhore código adjacente, não formate arquivos sem relação e limpe somente órfãos criados pela sua própria mudança.
+- Execução orientada a objetivo: transforme a tarefa em critérios verificáveis, associe etapas a validações e repita o loop até passar ou até encontrar bloqueio real.
+
+Teste mental para revisão: cada linha alterada deve rastrear diretamente até o pedido do usuário, a validação necessária ou a limpeza causada pela própria mudança.
 
 ## Agentes disponíveis
 
@@ -211,12 +236,15 @@ Instruções:
 ## Boas práticas
 
 - Prefira evidência do código real a suposições.
+- Declare suposições antes de implementar.
 - Faça mudanças pequenas, testáveis e reversíveis.
+- Prefira soluções simples e específicas a abstrações especulativas.
 - Separe refatorações grandes de correções funcionais sempre que possível.
 - Justifique qualquer dependência nova.
 - Registre comandos executados, testes feitos, resultados e riscos restantes.
 - Não considere uma tarefa pronta sem validação.
 - Evite alterações fora do escopo mesmo quando forem tentadoras.
+- Mencione problemas fora do escopo em vez de corrigi-los automaticamente.
 - Use subagentes para análise independente, não para diluir responsabilidade.
 
 ## Limitações

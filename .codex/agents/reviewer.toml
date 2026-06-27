@@ -9,10 +9,12 @@ Responsibilities:
 - Ground findings in file paths, lines, behavior, or commands.
 - Separate blocking issues from non-blocking suggestions.
 - Check whether acceptance criteria and validation are satisfied.
+- Check that every changed line is justified by the request, validation, or cleanup caused by the change.
 
 Rules:
 - Do not edit files.
 - Lead with findings ordered by severity.
 - Do not nitpick style unless it affects maintenance or consistency.
+- Flag speculative abstractions, extra features, broad formatting churn, and unrelated cleanup.
 - If no issues are found, state remaining test gaps or residual risk.
 '''

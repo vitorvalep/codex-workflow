@@ -6,9 +6,13 @@ O agente principal coordena o trabalho. Subagentes podem ser usados para dividir
 
 # Princípios gerais
 
+- Pensar antes de codar: declarar suposições, ambiguidades e tradeoffs antes de implementar.
+- Não esconder confusão. Se houver múltiplas interpretações relevantes, registrar opções ou perguntar quando a escolha for bloqueante.
 - Preferir evidência do código real, testes, logs, documentação local e histórico do projeto a suposições.
 - Trabalhar em mudanças pequenas, coesas, testáveis e reversíveis.
+- Preferir a solução mais simples que atende aos critérios de aceite.
 - Evitar alterações fora do escopo solicitado.
+- Não adicionar funcionalidades, flexibilidade, configuração ou abstrações que não foram pedidas.
 - Justificar dependências novas, comandos destrutivos, mudanças de contrato e decisões com impacto amplo.
 - Preservar convenções existentes antes de introduzir novos padrões.
 - Registrar comandos executados, testes feitos, resultados, arquivos alterados e riscos restantes.
@@ -16,11 +20,26 @@ O agente principal coordena o trabalho. Subagentes podem ser usados para dividir
 - Separar refatorações grandes de correções funcionais sempre que possível.
 - Parar quando houver bloqueio real, repetição de falhas sem progresso ou risco de dano sem autorização.
 
+# Regras de cautela e simplicidade
+
+Estas regras favorecem cautela em vez de velocidade. Para tarefas triviais, use julgamento, mas não pule validação quando houver risco real.
+
+- Transformar pedidos vagos em metas verificáveis antes de editar.
+- Para tarefas com múltiplas etapas, escrever um plano curto com verificação por etapa.
+- Se uma abordagem menor resolver o problema, preferir essa abordagem.
+- Se a solução parecer grande demais para o problema, simplificar antes de continuar.
+- Não criar abstrações para código de uso único.
+- Não tratar cenários impossíveis ou especulativos como requisitos reais.
+- Cada linha alterada deve ter relação direta com o pedido, validação ou limpeza causada pela própria mudança.
+- Limpar imports, variáveis, funções e arquivos órfãos criados pela própria mudança.
+- Não limpar código morto preexistente, comentários vizinhos ou formatação não relacionada sem pedido explícito.
+- Se encontrar problema fora do escopo, mencionar no resumo ou em risco restante, sem corrigir automaticamente.
+
 # Fluxo obrigatório de desenvolvimento
 
 O desenvolvimento deve ocorrer em ciclos:
 
-1. Planejar: entender tarefa, critérios de aceite, restrições, riscos e estratégia de validação.
+1. Planejar: entender tarefa, declarar suposições, critérios de aceite, restrições, riscos e estratégia de validação.
 2. Explorar: ler o código real, localizar pontos de mudança, descobrir comandos e convenções.
 3. Desenhar: escolher a menor solução compatível com o projeto.
 4. Implementar: aplicar mudanças pequenas e relacionadas ao objetivo.
@@ -45,8 +64,10 @@ Condições de parada:
 Uma tarefa só está pronta quando:
 
 - Os critérios de aceite foram atendidos ou as exceções foram registradas.
+- Suposições e ambiguidades relevantes foram registradas ou resolvidas.
 - O código relevante foi explorado antes das decisões.
 - A implementação está limitada ao escopo.
+- O diff não contém melhorias adjacentes, refatorações oportunistas ou flexibilidade especulativa.
 - Testes ou validações equivalentes foram criados ou atualizados quando aplicável.
 - As validações relevantes foram executadas e seus resultados foram registrados.
 - Falhas conhecidas foram corrigidas, explicadas ou registradas como risco restante.
@@ -60,6 +81,8 @@ Uma tarefa só está pronta quando:
 - Descobrir estrutura, comandos e convenções a partir do repositório.
 - Preferir APIs, padrões e abstrações já existentes.
 - Evitar reescrever código sem necessidade.
+- Não melhorar código adjacente apenas porque foi lido.
+- Seguir o estilo existente mesmo quando outro estilo parecer preferível.
 - Preservar contratos públicos e compatibilidade quando não houver autorização para quebrá-los.
 - Tratar geração de código, artefatos de build e arquivos temporários conforme as regras do projeto.
 - Validar alterações no nível mais próximo do risco introduzido.
@@ -79,6 +102,8 @@ Uma tarefa só está pronta quando:
 - Priorizar bugs, regressões, falta de testes, inconsistência com o código existente e complexidade desnecessária.
 - Verificar se a mudança atende aos critérios de aceite.
 - Confirmar que alterações fora do escopo não foram introduzidas.
+- Confirmar que não há abstração, configurabilidade ou tratamento especulativo sem requisito.
+- Verificar se cada linha alterada se conecta diretamente ao pedido.
 - Solicitar correções quando a revisão encontrar risco material.
 - Aprovar apenas quando os riscos restantes estiverem claros e aceitáveis.
 
@@ -134,6 +159,7 @@ Ao encerrar, informe:
 
 - Resumo da mudança.
 - Arquivos alterados.
+- Suposições feitas.
 - Comandos executados.
 - Testes e validações realizados.
 - Resultado de cada validação.

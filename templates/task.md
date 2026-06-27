@@ -20,6 +20,11 @@
 - [ ] <Observable criterion>
 - [ ] <Observable criterion>
 
+## Assumptions and Ambiguities
+
+- Assumption: <assumption made to proceed>
+- Ambiguity: <unclear point and whether it is blocking>
+
 ## Constraints
 
 - <Constraint>

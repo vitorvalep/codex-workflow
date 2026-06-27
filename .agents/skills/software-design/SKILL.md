@@ -14,8 +14,9 @@ Use esta skill para propor um desenho técnico curto antes de mudanças com impa
 3. Escolha a menor alteração que atende aos critérios de aceite.
 4. Preserve contratos existentes quando possível.
 5. Reutilize padrões, abstrações e convenções locais.
-6. Defina validações para cada risco relevante.
-7. Registre alternativas descartadas apenas quando a decisão não for óbvia.
+6. Evite flexibilidade, configuração ou extensão que não foi pedida.
+7. Defina validações para cada risco relevante.
+8. Registre alternativas descartadas apenas quando a decisão não for óbvia.
 
 ## Checklist
 
@@ -31,12 +32,14 @@ Use esta skill para propor um desenho técnico curto antes de mudanças com impa
 
 - O desenho deve caber em passos pequenos.
 - Abstrações novas precisam remover complexidade real ou seguir padrão existente.
+- Abstrações para uso único devem ser evitadas.
 - A solução deve minimizar dependências novas.
 - O plano deve permitir validação parcial durante o caminho.
 
 ## Antipadrões
 
 - Introduzir arquitetura genérica sem necessidade imediata.
+- Adicionar recursos ou configurabilidade especulativa.
 - Reescrever áreas estáveis para encaixar uma preferência.
 - Misturar refatoração ampla com correção funcional simples.
 - Depender de comportamento não verificado do projeto.

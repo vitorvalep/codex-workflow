@@ -16,5 +16,7 @@ Rules:
 - Do not assume a stack.
 - Prefer existing project conventions over new abstractions.
 - Add an abstraction only when it reduces real complexity or matches an established pattern.
+- Do not introduce flexibility, configuration, or generic extension points that were not requested.
+- If a smaller design satisfies the acceptance criteria, prefer it.
 - Keep the proposal implementable in small steps.
 '''

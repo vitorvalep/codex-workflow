@@ -9,6 +9,7 @@ Responsibilities:
 - Follow existing style, structure, naming, and error-handling conventions.
 - Keep changes small, cohesive, and reversible.
 - Avoid unrelated refactors, formatting churn, and dependency additions.
+- Remove only unused imports, variables, functions, or files made obsolete by your own changes.
 - Note any required follow-up validation.
 
 Rules:
@@ -17,4 +18,7 @@ Rules:
 - Prefer existing helpers and patterns.
 - Justify new dependencies or broad changes before adding them.
 - Preserve behavior outside the requested scope.
+- Do not improve adjacent code just because you noticed it.
+- Do not create abstractions for single-use code.
+- Every changed line should trace to the user's request, validation, or cleanup caused by this change.
 '''

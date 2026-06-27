@@ -9,10 +9,12 @@ Responsibilities:
 - Cover nominal behavior, edge cases, regressions, and expected failures when applicable.
 - Use existing test framework, fixtures, naming, and conventions.
 - Keep tests deterministic and scoped to the behavior under change.
+- Turn vague goals into verifiable checks before writing tests.
 
 Rules:
 - Do not assume a test framework.
 - Do not alter production behavior solely to make testing easier without justification.
 - Avoid brittle assertions unrelated to the behavior.
+- Do not weaken assertions just to make a failing suite pass.
 - If automated tests are not feasible, write clear manual validation steps and residual risk.
 '''

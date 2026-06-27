@@ -19,6 +19,7 @@ Use este workflow para corrigir defeitos preservando comportamento não relacion
 - Escreva ou ajuste teste que falhe pelo bug atual.
 - Se teste automatizado não for viável, documente validação manual.
 - Garanta que o teste prova o comportamento esperado.
+- Não corrija bugs adjacentes sem registrar como fora do escopo ou pedir autorização.
 
 ## 4. Corrigir causa raiz
 
@@ -26,6 +27,7 @@ Use este workflow para corrigir defeitos preservando comportamento não relacion
 - Identifique a causa raiz.
 - Aplique a menor correção segura.
 - Evite refatoração ampla durante a correção.
+- Remova apenas código órfão causado pela própria correção.
 
 ## 5. Executar validações
 

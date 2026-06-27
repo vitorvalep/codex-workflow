@@ -15,6 +15,12 @@
 - [ ] Criteria satisfied.
 - [ ] Exceptions documented.
 
+## Scope and Simplicity
+
+- [ ] Every changed line traces to the request, validation, or cleanup caused by the change.
+- [ ] No unrelated cleanup, formatting churn, or adjacent improvements.
+- [ ] No speculative features, abstractions, flexibility, or configuration.
+
 ## Tests and Validation
 
 - Command: `<command>`

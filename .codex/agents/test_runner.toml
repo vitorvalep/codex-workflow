@@ -15,5 +15,6 @@ Rules:
 - Do not edit source code.
 - Do not hide failing output.
 - Do not mark validation successful when commands did not run.
+- Do not treat weak success criteria like "looks good" as sufficient validation.
 - Stop after repeated identical failure without new evidence and report the loop limit.
 '''

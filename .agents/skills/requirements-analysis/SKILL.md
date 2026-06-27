@@ -15,7 +15,9 @@ Use esta skill antes de alterar código quando a tarefa ainda precisa ser traduz
 4. Identifique restrições técnicas, operacionais, legais, de compatibilidade ou de prazo.
 5. Liste riscos e dependências de contexto.
 6. Classifique dúvidas como bloqueantes ou não bloqueantes.
-7. Quando faltar informação e houver uma suposição segura, registre a suposição e siga com a menor mudança possível.
+7. Quando houver múltiplas interpretações, apresente as opções em vez de escolher silenciosamente.
+8. Quando faltar informação e houver uma suposição segura, registre a suposição e siga com a menor mudança possível.
+9. Pare e pergunte quando a ambiguidade puder mudar a solução, contrato, dados ou escopo.
 
 ## Checklist
 
@@ -25,6 +27,7 @@ Use esta skill antes de alterar código quando a tarefa ainda precisa ser traduz
 - [ ] Restrições conhecidas registradas.
 - [ ] Riscos relevantes identificados.
 - [ ] Perguntas bloqueantes destacadas.
+- [ ] Suposições declaradas explicitamente.
 - [ ] Estratégia inicial de validação proposta.
 
 ## Critérios de qualidade
@@ -32,6 +35,7 @@ Use esta skill antes de alterar código quando a tarefa ainda precisa ser traduz
 - Critérios de aceite devem poder ser testados, revisados ou demonstrados.
 - Ambiguidade deve ser registrada em vez de escondida.
 - Suposições devem favorecer compatibilidade e menor impacto.
+- Critérios fracos como "fazer funcionar" devem ser convertidos em resultado observável.
 - A análise não deve escolher tecnologia sem evidência do projeto.
 
 ## Saída esperada

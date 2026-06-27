@@ -14,8 +14,10 @@ Use esta skill ao editar código ou arquivos de projeto para entregar uma mudan�
 3. Faça a menor alteração defensável.
 4. Siga padrões existentes de estrutura, estilo, nomes, erros e testes.
 5. Evite alterações não relacionadas, formatação ampla e reordenação desnecessária.
-6. Mantenha cada mudança reversível e fácil de revisar.
-7. Registre decisões que não forem evidentes no diff.
+6. Não adicione features, flexibilidade, configuração ou abstração sem requisito.
+7. Remova apenas órfãos criados pela sua própria mudança.
+8. Mantenha cada mudança reversível e fácil de revisar.
+9. Registre decisões que não forem evidentes no diff.
 
 ## Checklist
 
@@ -24,6 +26,7 @@ Use esta skill ao editar código ou arquivos de projeto para entregar uma mudan�
 - [ ] Convenções locais foram seguidas.
 - [ ] Dependências novas foram evitadas ou justificadas.
 - [ ] Comportamento existente foi preservado.
+- [ ] Cada linha alterada se conecta ao pedido, validação ou limpeza causada pela mudança.
 - [ ] Erros e bordas relevantes foram tratados.
 - [ ] Validação necessária foi identificada.
 
@@ -33,6 +36,7 @@ Use esta skill ao editar código ou arquivos de projeto para entregar uma mudan�
 - Remoção de duplicação só deve ocorrer quando melhora a clareza ou reduz risco real.
 - Mudanças de contrato precisam ser explícitas e validadas.
 - Código temporário, logs de depuração e artefatos locais não devem ficar no diff.
+- Se uma implementação de muitas linhas puder ser substituída por uma solução menor e clara, simplifique.
 
 ## Condições de parada
 

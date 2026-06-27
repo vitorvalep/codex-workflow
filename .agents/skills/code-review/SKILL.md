@@ -14,8 +14,10 @@ Use esta skill para revisar mudanças como mantenedor do projeto.
 3. Verifique comportamento, contratos, erros, bordas e compatibilidade.
 4. Avalie testes e validações executadas.
 5. Procure mudanças não relacionadas.
-6. Classifique findings por severidade.
-7. Diferencie bloqueios de sugestões.
+6. Procure abstrações, flexibilidade ou tratamento especulativo sem requisito.
+7. Verifique se cada linha alterada se conecta ao pedido, validação ou limpeza causada pela mudança.
+8. Classifique findings por severidade.
+9. Diferencie bloqueios de sugestões.
 
 ## Checklist
 
@@ -26,6 +28,8 @@ Use esta skill para revisar mudanças como mantenedor do projeto.
 - [ ] O diff é menor do que uma solução alternativa razoável.
 - [ ] Convenções locais foram seguidas.
 - [ ] Dependências novas foram justificadas.
+- [ ] Não há limpeza de código morto preexistente sem pedido.
+- [ ] Não há melhoria adjacente ou formatação ampla sem motivo.
 - [ ] Documentação foi atualizada quando necessária.
 
 ## Severidade

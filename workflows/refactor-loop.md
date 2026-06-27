@@ -7,6 +7,7 @@ Use este workflow para melhorar estrutura interna preservando comportamento exte
 - Declare qual problema de manutenção será reduzido.
 - Confirme que não há mudança funcional pretendida.
 - Separe refactor de correção funcional sempre que possível.
+- Defina como a equivalência será verificada antes de editar.
 
 ## 2. Mapear comportamento existente
 
@@ -25,6 +26,7 @@ Use este workflow para melhorar estrutura interna preservando comportamento exte
 - Faça uma transformação por vez.
 - Preserve nomes públicos e contratos salvo autorização.
 - Evite mudanças de formatação ampla junto com lógica.
+- Não use o refactor para adicionar features ou flexibilidade especulativa.
 - Reexecute validações durante o caminho.
 
 ## 5. Validar equivalência
